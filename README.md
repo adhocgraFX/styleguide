@@ -1,13 +1,19 @@
 adhocgraFX fork of Style-Guide-Boilerplate v2.5.0
 =================================================
 
-### a base set of Joomla! Template markup and css styles
+## a base set of Joomla! &reg; template css styles
 
-## work in progress
+### work in progress
 
-##just started to implement normalize v3 css and some base styles
+### just started to implement normalize v3 css and some base styles
 
-## work in progress
+### work in progress
+
+### work in progress
+
+
+Style-Guide-Boilerplate v2.5.0
+==============================
 
 A starting point for crafting living style guides.
 
