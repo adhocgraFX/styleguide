@@ -1,0 +1,221 @@
+// Buttons
+// adhocgraFX overides and variations - Base styles
+
+// Core auch für button allg
+button, .btn  {
+  display: inline-block;
+  .ie7-inline-block();
+  padding: .5em 1em;
+  margin-top: 1em;
+  margin-bottom: 0; // For input.btn
+  margin-right: .5em;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+  .border-radius(@baseBorderRadius);
+  .ie7-restore-left-whitespace(); // Give IE7 some love
+  .box-shadow(none);
+  text-shadow: none;
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background-image: none;
+    outline: 0;
+    .box-shadow(none);
+    text-shadow: none;
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-image: none;
+    .opacity(65);
+    .box-shadow(none);
+  }
+}
+
+// button colors and  - backgrounds
+// default - concrete
+button, .btn {
+  color: @concreteDarker;
+  background: @cloudsDark;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @concrete;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: @concreteDark;
+  }
+}
+
+// primary blue jugfuldablue
+.btn-primary {
+  color: @lightwhitesmoke;
+  background: @jugfuldablueDark;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @jugfuldablue;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: @jugfuldablueDarker;
+  }
+}
+
+// default light gray
+.btn-default {
+  color: @gray;
+  background: @whitesmoke;
+  &:hover,
+  &:focus {
+    color: @gray;
+    background: @gainsboro;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: @gainsboroDark;
+  }
+}
+
+// light barranco gold
+.btn-light {
+  color: @gray;
+  background: @lightlightgold;
+  &:hover,
+  &:focus {
+    color: @gray;
+    background: @lightgold;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: @gold;
+  }
+}
+
+// Warning orange
+.btn-warning {
+  color: @lightwhitesmoke;
+  background: @orange;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @orangeDark;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: darken(@orangeDark, 5%);
+  }
+}
+
+// Danger red
+.btn-danger {
+  color: @lightwhitesmoke;
+  background: @red;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @redDark;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: darken(@redDark, 5%);
+  }
+}
+
+// Success green
+.btn-success {
+  color: @lightwhitesmoke;
+  background: @green;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @greenDark;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: darken(@greenDark, 5%);
+  }
+}
+
+// Info turquoise
+.btn-info {
+  color: @lightwhitesmoke;
+  background: @turquoise;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @turquoiseDark;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: darken(@turquoiseDark, 5%);
+  }
+}
+
+// Inverse midnightblue
+.btn-inverse {
+  color: @lightwhitesmoke;
+  background-color: @midnightblue;
+  &:hover,
+  &:focus {
+    color: @whitesmoke;
+    background: @midnightblueDark;
+  }
+  &.active,
+  &:active {
+    color: @whitesmoke;
+    background: darken(@midnightblueDark, 5%);
+  }
+}
+
+// Button Sizes
+
+// Large
+.btn-large {
+  padding: @paddingLarge;
+  font-size: @fontSizeLarge;
+  .border-radius(@borderRadiusLarge);
+}
+
+// Small
+.btn-small {
+  padding: @paddingSmall;
+  font-size: @fontSizeSmall;
+  .border-radius(@borderRadiusSmall);
+}
+
+// Mini
+.btn-mini {
+  padding: @paddingMini;
+  font-size: @fontSizeMini;
+  .border-radius(@borderRadiusSmall);
+}
