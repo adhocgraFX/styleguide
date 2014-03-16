@@ -1,0 +1,550 @@
+// typograpy
+
+textarea, pre, code, kbd, samp, var, tt {
+	font-family: Courier, sans-serif;
+}
+
+body {
+	font-size: @font-size; /* 100% = 16px */
+	line-height: @line-height; /* wird nur noch für abweichungen angegeben */
+	color: @body-copy-color;
+	background: @body-color;
+	font-family: 'FiraSans', Helvetica, Arial, 'Droid Sans', sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%; /* Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
+}
+
+// Heading incl subheading classes
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'FiraSans', Helvetica, Arial, 'Droid Sans', sans-serif;
+	color: @heading-color;
+	font-weight: normal;
+	line-height: @line-height-heading;
+	margin-top: @paragraph-val;
+	margin-bottom: @paragraph-val / 2;
+	// text rendering
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+
+	a {
+		font-weight: inherit;
+	}
+
+	.subheading {
+		color: @subheading-color;
+	}
+}
+
+h1 {
+	font-size: 2em;
+	&.subheading {
+		font-size: 2em * .9;
+	}
+}
+
+h2 {
+	font-size: 1.6666em;
+	&.subheading {
+		font-size: 1.6666em * .9;
+	}
+}
+
+h3 {
+	font-size: 1.5em;
+	&.subheading {
+		font-size: 1.5em * .9;
+	}
+}
+
+h4 {
+	font-size: 1.3333em;
+	&.subheading {
+		font-size: 1.3333em * .9;
+	}
+}
+
+h5 {
+	font-size: 1.1667em;
+	&.subheading {
+		font-size: 1em;
+	}
+}
+
+h6 {
+	font-size: 1em;
+}
+
+// paragraph styles plus helper classes
+p {
+	margin-bottom: @paragraph-val;
+
+	img {
+		margin: 0;
+	}
+
+	&.lead {
+		font-size: 125%;
+		margin-top: @paragraph-val;
+		margin-bottom: @indent-val;
+		text-indent: 0;
+		line-height: 1.4;
+		font-weight: 300;
+	}
+
+	&.bildlegende {
+		font-size: 100%;
+		text-indent: 0;
+		font-style: italic;
+		margin: @paragraph-val/2 0;
+	}
+
+	&.autor {
+		font-size: 112.5%;
+		text-indent: 0;
+		text-align: right;
+		font-style: italic;
+	}
+
+	&.columns-2 {
+		.content-columns(2, 2em, @gray, dotted, 1px);
+		margin: @paragraph-val 0;
+	}
+
+	&.columns-3 {
+		.content-columns(3, 2em, @gray, dotted, 1px);
+		margin: @paragraph-val 0;
+	}
+
+	&.highlight {
+		color: maroon;
+		background: lemonchiffon;
+	}
+
+	&.dimmed {
+		color: @grayLight;
+	}
+}
+
+span {
+	&.highlight {
+		color: maroon;
+		background: lemonchiffon;
+	}
+}
+
+// TODO zur Diskussion: Silbentrennung nur in article oder überall?
+article {
+	p, ul {
+		// nach Trent Walton
+		.css-hyphens (auto);
+		// normal: Indicates that lines may only break at normal word break points.
+		// break-word : Indicates that normally unbreakable words may be broken at ...
+		// arbitrary points if there are no otherwise acceptable break points in the line.
+		.breakword;
+
+		// text rendering
+		text-rendering: optimizeLegibility;
+		font-feature-settings: "kern";
+		-webkit-font-feature-settings: "kern";
+		-moz-font-feature-settings: "kern";
+		-moz-font-feature-settings: "kern=1";
+	}
+}
+
+//  Links
+//  TODO zur Diskussion: für article unterscheiden
+
+article {
+	a {
+		line-height: inherit;
+		outline: 0;
+		text-decoration: underline;
+		color: @link-color;
+
+		&:hover{
+			color: @link-hover-color;
+		}
+
+		&:focus {
+			color: @link-focus-color;
+		}
+
+		&:visited {
+			color: @link-visited-color;
+		}
+
+		img {
+			outline: 0;
+		}
+	}
+}
+
+a {
+	line-height: inherit;
+	outline: 0;
+	text-decoration: none;
+	color: @link-color;
+
+	&:hover{
+		color: @link-hover-color;
+	}
+
+	&:focus {
+		color: @link-focus-color;
+	}
+
+	&:visited {
+		color: @link-visited-color;
+	}
+
+	img {
+		outline: 0;
+	}
+}
+
+// text formats
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 80%;
+}
+
+big {
+	font-size: 120%;
+}
+
+// code formatting
+pre, code, kbd, tt, samp, var {
+	font-size: 100%;
+}
+
+pre {
+	line-height: 1.5;
+	margin: 0 0 1.5em 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+pre, code {
+	color: maroon;
+}
+
+kbd, samp, var, tt {
+	color: @gray;
+	font-weight: bold;
+}
+
+var, dfn {
+	font-style: italic;
+}
+
+acronym, abbr {
+	border-bottom: 1px @grayLight dotted;
+	font-variant: small-caps;
+	letter-spacing: .07em;
+	cursor: help;
+}
+
+mark {
+	background: yellow;
+	color: maroon;
+}
+
+//	definition lists allgemein
+dl {
+	margin-bottom: 1em;
+	color: @gray;
+
+	dt {
+		font-weight: normal;
+		color: @grayDark;
+	}
+
+	dd {
+		font-style: italic;
+		text-indent: 0;
+	}
+}
+
+// $Definition Lists
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+
+.lining {
+	.definition-list-style(lining);
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+.dictionary-style {
+	.definition-list-style(dictionary-style);
+}
+
+// Lists
+article {
+	ul, ol {
+		margin-bottom: 1.5em;
+		list-style: outside;
+		margin-left: 1.5em;
+
+		li {
+			line-height: 1.3;
+			margin-bottom: 0.5em;
+
+			p {
+				line-height: 1.3;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+
+		ol, ul {
+			margin: 0.5em 0 0.5em 1.5em;
+		}
+
+		ul {
+			list-style-type: circle;
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+
+		ul, ol {
+			margin: 0.5em 0 0.5em 1.5em;
+		}
+	}
+}
+
+ul, ol {
+	list-style: outside;
+	margin-left: 1em;
+
+	li {
+		line-height: 1.4;
+
+		p {
+			line-height: 1.4;
+		}
+	}
+}
+
+ul {
+	list-style-type: disc;
+
+	ol, ul {
+		margin-left: 1em;
+	}
+
+	ul {
+		list-style-type: circle;
+
+		ul {
+			list-style-type: square;
+		}
+	}
+}
+
+ol {
+	list-style-type: decimal;
+
+	ul, ol {
+		margin-left: 1em;
+	}
+}
+
+// media queries
+// Relative breakpoints: 47em; 80em; TODO dikutieren
+
+@media screen and (min-width: 47em) {
+	body {
+		font-size: @font-size-medium; /* 112,5% ~ 18px */
+		line-height: @line-height-medium;
+	}
+
+	h1 {
+		font-size: 3em;
+		&.subheading {
+			font-size: 3em * .9;
+		}
+	}
+
+	h2 {
+		font-size: 2.25em;
+		&.subheading {
+			font-size: 2.25em * .9;
+		}
+	}
+
+	h3 {
+		font-size: 1.5em;
+		&.subheading {
+			font-size: 1.5em * .9;
+		}
+	}
+
+	h4 {
+		font-size: 1.3125em;
+		&.subheading {
+			font-size: 1.3125em * .9;
+		}
+	}
+
+	h5 {
+		font-size: 1.125em;
+		&.subheading {
+			font-size: 1em;
+		}
+	}
+
+	h6 {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 80em) {
+	body {
+		font-size: @font-size-large; /* 125% ~ 20px */
+		line-height: @line-height-large;
+	}
+
+	h1 {
+		font-size: 3.4231em;
+		&.subheading {
+			font-size: 3.4231em * .9;
+		}
+	}
+
+	h2 {
+		font-size: 2.6154em;
+		&.subheading {
+			font-size: 2.6154em * .9;
+		}
+	}
+
+	h3 {
+		font-size: 2.1154em;
+		&.subheading {
+			font-size: 2.1154em * .9;
+		}
+	}
+
+	h4 {
+		font-size: 1.6154em;
+		&.subheading {
+			font-size: 1.6154em * .9;
+		}
+	}
+
+	h5 {
+		font-size: 1.3077em;
+		&.subheading {
+			font-size: 1.3077em * .9;
+		}
+	}
+
+	h6 {
+		font-size: 1em;
+	}
+}
+
+// FiraSans
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-Regular.eot');
+	src: url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Regular.woff') format('woff'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-Light.eot');
+	src: url('../fonts/FiraSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Light.woff') format('woff'), url('../fonts/FiraSans-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-Medium.eot');
+	src: url('../fonts/FiraSans-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Medium.woff') format('woff'), url('../fonts/FiraSans-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-Bold.eot');
+	src: url('../fonts/FiraSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Bold.woff') format('woff'), url('../fonts/FiraSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+// italics
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-RegularItalic.eot');
+	src: url('../fonts/FiraSans-RegularItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-RegularItalic.woff') format('woff'), url('../fonts/FiraSans-RegularItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-LightItalic.eot');
+	src: url('../fonts/FiraSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-LightItalic.woff') format('woff'), url('../fonts/FiraSans-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-MediumItalic.eot');
+	src: url('../fonts/FiraSans-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-MediumItalic.woff') format('woff'), url('../fonts/FiraSans-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'FiraSans';
+	src: url('../fonts/FiraSans-BoldItalic.eot');
+	src: url('../fonts/FiraSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-BoldItalic.woff') format('woff'), url('../fonts/FiraSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}

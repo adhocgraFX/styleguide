@@ -106,11 +106,19 @@
   <div class="sg-info">               
     <div class="sg-about sg-section">
       <h2 class="sg-h2"><a id="sg-about" class="sg-anchor">About</a></h2>
-      <p>Joomla!<sup>&reg;</sup> basic template markup and css styles.</p>
+      <p>Joomla!<sup>&reg;</sup> base template markup and css styles.</p>
+        <ul>
+            <li>normalize css v3</li>
+            <li>basics: add. css ideas plus html5 boilerplate helper classes</li>
+            <li>typo: base typographic styles</li>
+            <li>tables</li>
+            <li>forms</li>
+            <li>buttons</li>
+        </ul>
     </div><!--/.sg-about-->
     
     <div class="sg-colors sg-section">
-      <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">Colors</a></h2>
+      <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">adhocgraFX Colors</a></h2>
         <div class="sg-color sg-color--a"><span class="sg-color-swatch"><span class="sg-animated">#88ffda</span></span></div>
         <div class="sg-color sg-color--b"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
         <div class="sg-color sg-color--c"><span class="sg-color-swatch"><span class="sg-animated">#339db0</span></span></div>

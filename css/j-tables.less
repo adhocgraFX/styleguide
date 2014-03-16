@@ -1,0 +1,92 @@
+// Tables mostly inspired by Dirk Jesse
+// TODO css besser strkturieren
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: @paragraph-val 0;
+	color: @grayDark;
+	border-top: 1px @gainsboroDarker solid;
+	border-bottom: 1px @gainsboroDarker solid;
+	background: @white;
+
+	caption {
+		font-size: 87.5%;
+		color: @midnightblue;
+		margin-left: .5em;
+	}
+
+	&.table-bordered {
+		border: 1px @gainsboroDarker solid;
+	}
+}
+
+th, td {
+	line-height: 1.4em;
+	vertical-align: top;
+	padding: 0.6em 0.5em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.nowrap {
+		white-space: nowrap;
+	}
+}
+
+thead th, tfoot th, tbody th {
+	text-align: left;
+	color: @grayLight;
+	border-bottom: 1px @gainsboroDarker solid;
+}
+
+thead th {
+	border-bottom: 3px @gainsboroDarker solid;
+}
+
+tbody, tfoot {
+
+	th {
+		text-align: left;
+		border-top: 1px solid @gainsboroDarker;
+	}
+
+	td {
+		text-align: left;
+		border-top: 1px solid @gainsboroDarker;
+	}
+
+	// highlight row on mouse over
+	tr:hover th, tr:hover td {
+		background: @cloudsDark;
+		background: rgba(0, 0, 0, .025);
+	}
+}
+
+.table-bordered {
+
+	thead th {
+		background: @clouds;
+		border-right: 1px @gainsboroDarker solid;
+	}
+
+	tbody {
+
+		th {
+			&[scope="row"] {
+				background: @whitesmoke;
+			}
+
+			border-right: 1px solid @gainsboroDarker
+		}
+
+		tr:nth-child(2n+2) {
+			background: @whitesmoke;
+		}
+
+		td {
+			border-right: 1px solid @gainsboroDarker;
+		}
+	}
+}

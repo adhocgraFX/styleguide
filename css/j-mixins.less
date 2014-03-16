@@ -1,0 +1,132 @@
+// Box sizing
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	-moz-box-sizing: @boxmodel;
+	box-sizing: @boxmodel;
+}
+
+// CSS3 Content Columns
+.content-columns(@columnCount, @columnGap: 2em, #666, dotted, 1px) {
+	-webkit-column-count: @columnCount;
+	-moz-column-count: @columnCount;
+	column-count: @columnCount;
+	-webkit-column-gap: @columnGap;
+	-moz-column-gap: @columnGap;
+	column-gap: @columnGap;
+	-webkit-column-rule-color: #666;
+	-moz-column-rule-color: #666;
+	-webkit-column-rule-style: dotted;
+	-moz-column-rule-style: dotted;
+	-webkit-column-rule-width: 1px;
+	-moz-column-rule-width: 1px;
+}
+
+// Typeplate inspired font mixins
+// $Hypens
+// -------------------------------------//
+//http://trentwalton.com/2011/09/07/css-hyphenation
+
+.css-hyphens (@val) {
+	// Accepted values: [ none | manual | auto ]
+	-webkit-hyphens: @val; // Safari 5.1 thru 6, iOS 4.2 thru 6
+	-moz-hyphens: @val; // Firefox 16 thru 20
+	-ms-hyphens: @val; // IE10
+	-o-hyphens: @val; // PRESTO...haha LOL
+	hyphens: @val; // W3C standard
+}
+
+// $Wordwrap
+// -------------------------------------//
+// Silent Sass Classes - A.K.A Placeholders
+//
+// normal: Indicates that lines may only break at normal word break points.
+// break-word : Indicates that normally unbreakable words may be broken at
+// arbitrary points if there are no otherwise acceptable break points in the line.
+
+.breakword {
+	word-wrap: break-word;
+}
+
+.normal-wrap {
+	word-wrap: normal;
+}
+
+.inherit-wrap {
+	word-wrap: auto;
+}
+
+// $Definition Lists
+// -------------------------------------//
+// lining
+// http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
+//
+// dictionary-style
+// http://lea.verou.me/2012/02/flexible-multiline-definition-lists-with-2-lines-of-css
+
+.definition-list-style (@style) when (@style = lining) {
+	dt,
+	dd {
+		display: inline;
+		margin: 0;
+	}
+	dt,
+	dd {
+		& + dt {
+			&:before {
+				content: "\A";
+				white-space: pre;
+			}
+		}
+	}
+	dd {
+		& + dd {
+			&:before {
+				content: ", ";
+			}
+		}
+		&:before {
+			content: ": ";
+			// margin-left: -0.2rem; // removes extra space between the dt and the colon
+			margin-right: 0.25rem;
+		}
+	}
+}
+
+// dictionary-style
+.definition-list-style (@style) when (@style = dictionary-style) {
+	dt {
+		display: inline;
+		counter-reset: definitions;
+		& + dt {
+			&:before {
+				content: ", ";
+				margin-left: -0.2rem; // removes extra space between the dt and the comma
+			}
+		}
+	}
+	dd {
+		display: block;
+		margin-left: 1em !important;
+		text-indent: -1em;
+		counter-increment: definitions;
+		&:before {
+			content: ~"counter(definitions, decimal)" ". ";
+		}
+	}
+}
+
+// Bootstrap mixins
+
+// Border Radius
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+// Drop shadows
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
