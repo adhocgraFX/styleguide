@@ -1,11 +1,15 @@
-adhocgraFX fork of Style-Guide-Boilerplate v2.5.0
+adhocgraFX version of Style-Guide-Boilerplate v2.5.0
 =================================================
 
 ## a base set of Joomla! &reg; template css styles
 
 ### work in progress
 
-### just started to implement normalize v3 css and some base styles
+### just started 
+
+normalize.css v3 
+
+basic typo styles
 
 ### work in progress
 
