@@ -1,0 +1,68 @@
+// Images - img skalierbar machen
+
+img, img.scale-with-grid {
+	max-width: 100%;
+	height: auto;
+	}
+
+img {
+
+	&.scale-with-grid {
+		max-width: 100%;
+	}
+
+	&.max-image {
+		width: 100%;
+	}
+
+	&.half-image {
+		width: 50%;
+	}
+
+	&.third-image {
+		width: 33%;
+	}
+
+	&.two-thirds-image {
+		width: 66%;
+	}
+}
+
+// figure and figcaption (caption js)
+
+figure {
+	margin: 0 0 @paragraph-val 0;
+	background: @gainsboroLight;
+	border: 1px solid @gainsboro;
+
+	figcaption {
+		font-size: 100%;
+		font-style: italic;
+		margin: @paragraph-val/2;
+	}
+}
+
+// object embed and video
+
+object, embed, canvas, iframe, video, svg {
+	max-width: 100%;
+}
+
+// helper class for divs
+.video-container {
+	position: relative;
+	margin: 0 0 @paragraph-val 0;
+	padding-bottom: 51%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	border: 1px solid @gray;
+
+	iframe, object, embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

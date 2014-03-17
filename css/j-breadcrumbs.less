@@ -1,0 +1,67 @@
+// breadcrumbs
+.breadcrumbs-pad {
+	background: @clouds;
+	margin: .5em 0;
+	font-size: .875em;
+	.border-radius(@baseBorderRadius);
+	border: 1px solid @cloudsDark;
+}
+
+.breadcrumb {
+	width: 100%;
+	line-height: 1.4;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background: transparent;
+
+	li {
+		list-style: none;
+		position: relative;
+		display: block;
+		float: left;
+		padding: 0;
+		margin: 0 .5em 0 0;
+
+		&.active {
+			padding: .5em 0;
+
+			span.divider {
+				position: relative;
+				padding: 0 .25em;
+				color: @concrete;
+				top: 0;
+			}
+		}
+
+		span.divider {
+			position: relative;
+			padding: 0 .25em;
+			color: @concrete;
+			top: .5em;
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: normal;
+			position: relative;
+			display: block;
+			float: left;
+			padding: .5em 1em;
+			color: @concreteDarker;
+			background: @clouds;
+			.border-radius(@baseBorderRadius);
+
+			&:hover {
+				color: @whitesmoke;
+				background: @concrete;
+			}
+
+			&:focus, &:active {
+				color: @whitesmoke;
+				background: @concreteDark;
+			}
+		}
+	}
+}

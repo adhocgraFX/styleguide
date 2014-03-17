@@ -130,7 +130,7 @@
     
     <div class="sg-font-stacks sg-section">
       <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
-      <p class="sg-font sg-font-primary">"HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
+      <p class="sg-font sg-font-primary">"FiraSans", "HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
       <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->

@@ -1,5 +1,4 @@
-/* #Forms
-================================================== */
+// #Forms
 
 form {
 	margin-bottom: @paragraph-val;
@@ -9,21 +8,7 @@ fieldset {
 	margin-bottom: @paragraph-val;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="search"],
-input[type="tel"],
-input[type="url"],
-input[type="file"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-input[type="number"],
+input,
 textarea,
 select {
 	border: 1px solid @grayLight;
@@ -40,10 +25,38 @@ select {
 	&:focus {
 		border: 1px solid @gray;
 		color: @grayDarker;
-		.box-shadow(0 0 3px rgba(0, 0, 0, .2));
 	}
 }
 
+input[disabled],
+textarea[disabled],
+select[disabled] {
+	border: 1px solid @grayLight;
+	padding: .25em .5em;
+	outline: none;
+	.border-radius(.2em);
+	color: @grayLight;
+	margin: 0;
+	max-width: 100%;
+	display: block;
+	margin-bottom: .5em;
+	background: @white;
+}
+
+input[readonly],
+textarea[readonly],
+select[readonly] {
+	border: 1px solid @grayLight;
+	padding: .25em .5em;
+	outline: none;
+	.border-radius(.2em);
+	color: @gray;
+	margin: 0;
+	max-width: 100%;
+	display: block;
+	margin-bottom: .5em;
+	background: @white;
+}
 
 select,
 input[type="color"],
@@ -66,7 +79,8 @@ legend {
 	font-size: .875em;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
 	display: inline;
 }
 
@@ -74,5 +88,4 @@ label span,
 legend span {
 	font-weight: normal;
 	font-size: .875em;
-	color: @gray;
-}
+	color: @gray;}
