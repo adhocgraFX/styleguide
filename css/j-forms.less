@@ -11,11 +11,11 @@ fieldset {
 input,
 textarea,
 select {
-	border: 1px solid @grayLight;
+	border: 1px solid @gray-light;
 	padding: .25em .5em;
 	outline: none;
 	.border-radius(.2em);
-	color: @grayDark;
+	color: @gray-dark;
 	margin: 0;
 	max-width: 100%;
 	display: block;
@@ -24,18 +24,18 @@ select {
 
 	&:focus {
 		border: 1px solid @gray;
-		color: @grayDarker;
+		color: @gray-darker;
 	}
 }
 
 input[disabled],
 textarea[disabled],
 select[disabled] {
-	border: 1px solid @grayLight;
+	border: 1px solid @gray-light;
 	padding: .25em .5em;
 	outline: none;
 	.border-radius(.2em);
-	color: @grayLight;
+	color: @gray-light;
 	margin: 0;
 	max-width: 100%;
 	display: block;
@@ -46,7 +46,7 @@ select[disabled] {
 input[readonly],
 textarea[readonly],
 select[readonly] {
-	border: 1px solid @grayLight;
+	border: 1px solid @gray-light;
 	padding: .25em .5em;
 	outline: none;
 	.border-radius(.2em);
@@ -68,6 +68,13 @@ input[type="time"],
 input[type="datetime-local"], {
 	padding: 0;
 }
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+}
+
 
 textarea {
 	min-height: 10em;

@@ -5,9 +5,9 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	margin: @paragraph-val 0;
-	color: @grayDark;
-	border-top: 1px @gainsboroDarker solid;
-	border-bottom: 1px @gainsboroDarker solid;
+	color: @gray-dark;
+	border-top: 1px @gainsboro-darker solid;
+	border-bottom: 1px @gainsboro-darker solid;
 	background: @white;
 
 	caption {
@@ -17,7 +17,7 @@ table {
 	}
 
 	&.table-bordered {
-		border: 1px @gainsboroDarker solid;
+		border: 1px @gainsboro-darker solid;
 	}
 }
 
@@ -37,29 +37,29 @@ th, td {
 
 thead th, tfoot th, tbody th {
 	text-align: left;
-	color: @grayLight;
-	border-bottom: 1px @gainsboroDarker solid;
+	color: @gray-light;
+	border-bottom: 1px @gainsboro-darker solid;
 }
 
 thead th {
-	border-bottom: 3px @gainsboroDarker solid;
+	border-bottom: 3px @gainsboro-darker solid;
 }
 
 tbody, tfoot {
 
 	th {
 		text-align: left;
-		border-top: 1px solid @gainsboroDarker;
+		border-top: 1px solid @gainsboro-darker;
 	}
 
 	td {
 		text-align: left;
-		border-top: 1px solid @gainsboroDarker;
+		border-top: 1px solid @gainsboro-darker;
 	}
 
 	// highlight row on mouse over
 	tr:hover th, tr:hover td {
-		background: @cloudsDark;
+		background: @clouds-dark;
 		background: rgba(0, 0, 0, .025);
 	}
 }
@@ -68,7 +68,7 @@ tbody, tfoot {
 
 	thead th {
 		background: @clouds;
-		border-right: 1px @gainsboroDarker solid;
+		border-right: 1px @gainsboro-darker solid;
 	}
 
 	tbody {
@@ -78,7 +78,7 @@ tbody, tfoot {
 				background: @whitesmoke;
 			}
 
-			border-right: 1px solid @gainsboroDarker
+			border-right: 1px solid @gainsboro-darker
 		}
 
 		tr:nth-child(2n+2) {
@@ -86,7 +86,7 @@ tbody, tfoot {
 		}
 
 		td {
-			border-right: 1px solid @gainsboroDarker;
+			border-right: 1px solid @gainsboro-darker;
 		}
 	}
 }

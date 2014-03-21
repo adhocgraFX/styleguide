@@ -125,7 +125,7 @@ p {
 	}
 
 	&.dimmed {
-		color: @grayLight;
+		color: @gray-light;
 	}
 }
 
@@ -249,7 +249,7 @@ var, dfn {
 }
 
 acronym, abbr {
-	border-bottom: 1px @grayLight dotted;
+	border-bottom: 1px @gray-light dotted;
 	font-variant: small-caps;
 	letter-spacing: .07em;
 	cursor: help;
@@ -266,8 +266,8 @@ dl {
 	color: @gray;
 
 	dt {
-		font-weight: normal;
-		color: @grayDark;
+		font-weight: bold;
+		color: @gray-light;
 	}
 
 	dd {
@@ -393,7 +393,7 @@ ol {
 blockquote, blockquote p, q, cite {
 	font-size: 1.125em;
 	line-height: @line-height;
-	color: @concreteDark;
+	color: @concrete-dark;
 	font-style: italic;
 	font-weight: 300;
 }
@@ -416,10 +416,10 @@ blockquote {
 			color: @concrete;
 
 			&:hover {
-				color: @concreteDark;
+				color: @concrete-dark;
 			}
 			&:visited, &:active {
-				color: darken(@concreteDark, 5%);
+				color: darken(@concrete-dark, 5%);
 			}
 		}
 
@@ -442,7 +442,7 @@ hr {
 
 article {
 	hr {
-		border-top: 1px solid @grayLight;
+		border-top: 1px solid @gray-light;
 		margin: @indent-val;
 		height: 0;
 	}

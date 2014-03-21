@@ -1,16 +1,18 @@
-// Buttons
-// adhocgraFX overides and variations - Base styles
+// Buttons adhocgraFX bootstrap overides and variations - Base styles
 
-// Core auch für button allg
-button, .btn  {
+// Core auch für button allgemein
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   display: inline-block;
   .ie7-inline-block();
   padding: .5em 1em;
   margin-top: 1em;
   margin-bottom: 0; // For input.btn
   margin-right: .5em;
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
+  font-size: @font-size;
+  line-height: @line-height;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -54,9 +56,12 @@ button, .btn  {
 
 // button colors and  - backgrounds
 // default - concrete
-button, .btn {
-  color: @concreteDarker;
-  background: @cloudsDark;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  color: @concrete-darker;
+  background: @clouds-dark;
   &:hover,
   &:focus {
     color: @whitesmoke;
@@ -65,28 +70,28 @@ button, .btn {
   &.active,
   &:active {
     color: @whitesmoke;
-    background: @concreteDark;
+    background: @concrete-dark;
   }
 }
 
-// primary blue jugfuldablue
-.btn-primary {
-  color: @lightwhitesmoke;
-  background: @jugfuldablueDark;
+// primary > brand color
+.button-primary {
+  color: @whitesmoke-light;
+  background: @brand-color;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @jugfuldablue;
+    background: @brand-color-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: @jugfuldablueDarker;
+    background: @brand-color-darker;
   }
 }
 
 // default light gray
-.btn-default {
+.button-default {
   color: @gray;
   background: @whitesmoke;
   &:hover,
@@ -97,125 +102,126 @@ button, .btn {
   &.active,
   &:active {
     color: @whitesmoke;
-    background: @gainsboroDark;
-  }
-}
-
-// light barranco gold
-.btn-light {
-  color: @gray;
-  background: @lightlightgold;
-  &:hover,
-  &:focus {
-    color: @gray;
-    background: @lightgold;
-  }
-  &.active,
-  &:active {
-    color: @whitesmoke;
-    background: @gold;
+    background: @gainsboro-dark;
   }
 }
 
 // Warning orange
-.btn-warning {
-  color: @lightwhitesmoke;
+.button-warning {
+  color: @whitesmoke-light;
   background: @orange;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @orangeDark;
+    background: @orange-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@orangeDark, 5%);
+    background: darken(@orange-dark, 5%);
   }
 }
 
-// Danger red
-.btn-danger {
-  color: @lightwhitesmoke;
+// error red
+.button-error {
+  color: @whitesmoke-light;
   background: @red;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @redDark;
+    background: @red-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@redDark, 5%);
+    background: darken(@red-dark, 5%);
   }
 }
 
 // Success green
-.btn-success {
-  color: @lightwhitesmoke;
+.button-success {
+  color: @whitesmoke-light;
   background: @green;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @greenDark;
+    background: @green-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@greenDark, 5%);
+    background: darken(@green-dark, 5%);
   }
 }
 
 // Info turquoise
-.btn-info {
-  color: @lightwhitesmoke;
+.button-info {
+  color: @whitesmoke-light;
   background: @turquoise;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @turquoiseDark;
+    background: @turquoise-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@turquoiseDark, 5%);
+    background: darken(@turquoise-dark, 5%);
   }
 }
 
-// Inverse midnightblue
-.btn-inverse {
-  color: @lightwhitesmoke;
+// dark > midnightblue
+.button-dark {
+  color: @whitesmoke-light;
   background-color: @midnightblue;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @midnightblueDark;
+    background: @midnightblue-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@midnightblueDark, 5%);
+    background: @midnightblue-darker;
   }
 }
+
+// light > gold
+.button-light {
+	color: @gray;
+	background: @gold-lighter;
+	&:hover,
+	&:focus {
+		color: @gray;
+		background: @gold-light;
+	}
+	&.active,
+	&:active {
+		color: @whitesmoke;
+		background: @gold;
+	}
+}
+
 
 // Button Sizes
 
 // Large
-.btn-large {
-  padding: @paddingLarge;
-  font-size: @fontSizeLarge;
-  .border-radius(@borderRadiusLarge);
+.large {
+  padding:padding: .5em 1em;
+  font-size: @font-size-large;
+  .border-radius(3em);
 }
 
 // Small
-.btn-small {
-  padding: @paddingSmall;
-  font-size: @fontSizeSmall;
-  .border-radius(@borderRadiusSmall);
+.small {
+  padding: padding: .25em .5em;
+  font-size: @font-size-small;
+  .border-radius(2em);
 }
 
 // Mini
-.btn-mini {
-  padding: @paddingMini;
-  font-size: @fontSizeMini;
-  .border-radius(@borderRadiusSmall);
+.mini {
+  padding: padding: .2em .4em;
+  font-size: @font-size-mini;
+  .border-radius(1em);
 }

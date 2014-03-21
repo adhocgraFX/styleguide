@@ -1,68 +1,86 @@
 // Colors and grays
 
-// Grays TODO komplette Grauwerttabelle erarbeiten
+// Grays komplette Grauwerttabelle in 5%
 
-@white:                 #fff;
-@smoke:                 #fefefe;
-@lightwhitesmoke:       #f9f9f9;
-@whitesmoke:            #f5f5f5;
-@grayLighter:           #eee;
-@gainsboroLight:        #ececec;
+@black:                 #000000;
+@gray5:                 #0D0D0D;
+@gray-darker:           #1A1A1A;
+@gray15:                #262626;
+@gray-dark:             #333333;
+@gray25:                #404040;
+@gray30:                #4D4D4D;
+@gray35:                #595959;
+@gray:                  #666666;
+@gray45:                #737373;
+@gray50:                #7F7F7F;
+@gray55:                #8C8C8C;
+@gray-light:            #999999;
+@gray65:                #A6A6A6;
+@gray70:                #B3B3B3;
+@gray75:                #BFBFBF;
+@gray-lighter:          #CCCCCC;
+@gray85:                #D9D9D9;
+
+@gainsboro-darker:      darken(@gainsboro, 20%); ;
+@gainsboro-dark:        darken(@gainsboro, 10%);
 @gainsboro:             #dcdcdc;
-@gainsboroDark:         #cbcbcb;
-@gainsboroDarker:       #bcbcbc;
-@grayLight:             #999;
-@gray:                  #666;
+@gainsboro-light:       lighten(@gainsboro, 10%);;
 
+@gray90:                #E5E5E5;
+@gray95:                #F2F2F2;
 
-//adhoc
-@grayDark:              #333;
-@grayDarker:            #222;
-@black:                 #000;
+@whitesmoke-dark:       darken(@whitesmoke, 10%);
+@whitesmoke:            #f5f5f5;
+@whitesmoke-light:      lighten(@whitesmoke, 5%);
+
+@white:                 #ffffff;
+
 
 // Accent colors
 
 // TODO Standards festlegen für alert boxes, buttons links, brands ...
 
 @clouds:                #F0F5FF;
-@cloudsDark:            #D3D8E0;
+@clouds-dark:           #D3D8E0;
+
 @concrete:              #AAAEB5;
-@concreteDark:          #6E7175;
-@concreteDarker:        #3C3D40;
+@concrete-dark:         #6E7175;
+@concrete-darker:       #3C3D40;
 
 @midnightblue:          #34495E;
-@midnightblueDark:      #2C3E50;
-@midnightblueDarker:    #253443;
+@midnightblue-dark:     #2C3E50;
+@midnightblue-darker:   #253443;
 
 @turquoise:             #1ABC9C;
-@turquoiseDark:         #16A085;
+@turquoise-dark:        darken(@turquoise, 20%);
 
 @blue:                  #3498DB;
-@blueDark:              #2980B9;
-
-@brand-color-light:     #99BAFF;
-@brand-color:           #748dc1;
-@brand-color-dark:      #2C4D91;
-@brand-color-darker:    #244079;
+@blue-dark:             darken(@blue, 20%);
 
 @green:                 #2ECC71;
-@greenDark:             #27AE60;
+@green-dark:            darken(@green, 20%);
 
 @red:                   #E74C3C;
-@redDark:               #C0392B;
+@red-dark:              darken(@red, 20%);
 
 @yellow:                #F1C40F;
-@yellowDark:            #F39C12;
+@yellow-dark:           darken(@yellow, 20%);
 
 @orange:                #E67E22;
-@orangeDark:            #D35400;
+@orange-dark:           darken(@orange, 20%);
 
 // light light barranco gold
-@lightlightgold:        #F0EBDC;
-@lightgold:             #E1DCBE;
+@gold-lighter:          #F0EBDC;
+@gold-light:            #E1DCBE;
 @gold:                  #AAA078;
 
-// link colors
+// btand color je nach job
+@brand-color-light:     lighten(@brand-color, 10%);
+@brand-color:           #748dc1;
+@brand-color-dark:      darken(@brand-color, 10%);
+@brand-color-darker:    darken(@brand-color, 20%);
+
+// link colors und brand colors in sync? TODO zur Diskussion
 @link-color:            @brand-color;
 @link-hover-color:      @brand-color-light;
 @link-focus-color:      @brand-color-dark;
@@ -80,26 +98,32 @@
 @line-height-heading: 1.1;
 
 @font-size: 100%;
-@font-size-medium: 112.5%;
-// percentage value (16 * 112.5% = 18px)
-@font-size-large: 125%;
-// percentage value (16 * 125% = 20px)
+@font-size-medium: 112.5%; // percentage value (16 * 112.5% = 18px)
+@font-size-large: 125%; // percentage value (16 * 125% = 20px)
+
+@font-size-small: 87.5%; // percentage value (16 * 87.5% = 14px)
+@font-size-mini: 75%; // percentage value (16 * 75% = 12px)
+
 
 // body and basic text colors
 
-@body-color: @lightwhitesmoke;
-@body-copy-color: @grayDark;
+@body-color: @whitesmoke-light;
+@body-copy-color: @gray-dark;
 @heading-color: @gray;
-@subheading-color: @grayLight;
+@subheading-color: @gray-light;
+
 
 // TypeScale Unit
 
 @type-scale-unit-value: em;
 
+
 // Text Indentation Value, space between pargraphs
 
 @indent-val: 1.5em;
 @paragraph-val: @indent-val / 2;
+
+
 
 // bootstrap variables
 

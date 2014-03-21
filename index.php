@@ -125,6 +125,9 @@
         <div class="sg-color sg-color--d"><span class="sg-color-swatch"><span class="sg-animated">#2078aa</span></span></div>
         <div class="sg-color sg-color--e"><span class="sg-color-swatch"><span class="sg-animated">#3a517a</span></span></div>
         <div class="sg-color sg-color--f"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
+        <div class="sg-color sg-color--g"><span class="sg-color-swatch"><span class="sg-animated">#2078aa</span></span></div>
+        <div class="sg-color sg-color--h"><span class="sg-color-swatch"><span class="sg-animated">#3a517a</span></span></div>
+
         <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-colors-->
     

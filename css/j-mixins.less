@@ -6,15 +6,15 @@
 }
 
 // CSS3 Content Columns
-.content-columns(@columnCount, @columnGap: 2em, #666, dotted, 1px) {
+.content-columns(@columnCount, @columnGap: 2em, @gray, dotted, 1px) {
 	-webkit-column-count: @columnCount;
 	-moz-column-count: @columnCount;
 	column-count: @columnCount;
 	-webkit-column-gap: @columnGap;
 	-moz-column-gap: @columnGap;
 	column-gap: @columnGap;
-	-webkit-column-rule-color: #666;
-	-moz-column-rule-color: #666;
+	-webkit-column-rule-color: @gray;
+	-moz-column-rule-color: @gray;
 	-webkit-column-rule-style: dotted;
 	-moz-column-rule-style: dotted;
 	-webkit-column-rule-width: 1px;
@@ -129,4 +129,45 @@
 	-webkit-box-shadow: @shadow;
 	-moz-box-shadow: @shadow;
 	box-shadow: @shadow;
+}
+
+// Webkit-style focus
+// ------------------
+.tab-focus() {
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+// IE7 inline-block
+// ----------------
+.ie7-inline-block() {
+	*display: inline; /* IE7 inline-block hack */
+	*zoom: 1;
+}
+
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+.ie7-restore-left-whitespace() {
+	*margin-left: .3em;
+
+	&:first-child {
+		*margin-left: 0;
+	}
+}
+
+.ie7-restore-right-whitespace() {
+	*margin-right: .3em;
+}
+
+// Opacity
+.opacity(@opacity) {
+	opacity: @opacity / 100;
+	filter: ~"alpha(opacity=@{opacity})";
 }
