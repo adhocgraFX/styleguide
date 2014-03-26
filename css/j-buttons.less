@@ -56,10 +56,7 @@ input[type="submit"] {
 
 // button colors and  - backgrounds
 // default - concrete
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button {
   color: @concrete-darker;
   background: @clouds-dark;
   &:hover,
@@ -91,9 +88,12 @@ input[type="submit"] {
 }
 
 // default light gray
-.button-default {
+.button-default,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   color: @gray;
-  background: @whitesmoke;
+  background: @gainsboro-light;
   &:hover,
   &:focus {
     color: @gray;
@@ -138,35 +138,35 @@ input[type="submit"] {
   }
 }
 
-// Success green
+// success turquoise
 .button-success {
-  color: @whitesmoke-light;
-  background: @green;
-  &:hover,
-  &:focus {
-    color: @whitesmoke;
-    background: @green-dark;
-  }
-  &.active,
-  &:active {
-    color: @whitesmoke;
-    background: darken(@green-dark, 5%);
-  }
+	color: @whitesmoke-light;
+	background: @turquoise;
+	&:hover,
+	&:focus {
+		color: @whitesmoke;
+		background: @turquoise-dark;
+	}
+	&.active,
+	&:active {
+		color: @whitesmoke;
+		background: darken(@turquoise-dark, 5%);
+	}
 }
 
-// Info turquoise
+// info blue
 .button-info {
   color: @whitesmoke-light;
-  background: @turquoise;
+  background: @blue;
   &:hover,
   &:focus {
     color: @whitesmoke;
-    background: @turquoise-dark;
+    background: @blue-dark;
   }
   &.active,
   &:active {
     color: @whitesmoke;
-    background: darken(@turquoise-dark, 5%);
+    background: darken(@blue-dark, 5%);
   }
 }
 
