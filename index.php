@@ -114,6 +114,9 @@
             <li>tables</li>
             <li>forms</li>
             <li>buttons</li>
+            <li>images and media</li>
+            <li>breadcrumbs</li>
+            <li>alerts</li>
         </ul>
     </div><!--/.sg-about-->
     
