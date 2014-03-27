@@ -7,15 +7,15 @@ adhocgraFX Style-Guide-Boilerplate
 
 ### work in progress
 
-*normalize css v3
-*basics: add. css ideas plus html5 boilerplate helper classes
-*typo: base typographic styles
-*tables
-*forms
-*buttons
-*images and media
-*breadcrumbs
-*alerts
+* normalize css v3
+* basics: add. css ideas plus html5 boilerplate helper classes
+* typo: base typographic styles
+* tables
+* forms
+* buttons
+* images and media
+* breadcrumbs
+* alerts
 
 ### work in progress
 
