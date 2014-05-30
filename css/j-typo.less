@@ -9,7 +9,7 @@ body {
 	line-height: @line-height; /* wird nur noch für abweichungen angegeben */
 	color: @body-copy-color;
 	background: @body-color;
-	font-family: 'FiraSans', Helvetica, Arial, 'Droid Sans', sans-serif;
+	font-family: 'Fira Sans', Helvetica, Arial, 'Droid Sans', sans-serif;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%; /* Automatische Schriftvergrößerung in mobilen Webkit-Browsern vermeiden */
 }
@@ -17,9 +17,9 @@ body {
 // Heading incl subheading classes
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'FiraSans', Helvetica, Arial, 'Droid Sans', sans-serif;
+	font-family: 'Fira Sans', Helvetica, Arial, 'Droid Sans', sans-serif;
 	color: @heading-color;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: @line-height-heading;
 	margin-top: @paragraph-val;
 	margin-bottom: @paragraph-val / 2;
@@ -32,54 +32,60 @@ h1, h2, h3, h4, h5, h6 {
 
 	a {
 		font-weight: inherit;
+		text-decoration: none;
 	}
 
-	.subheading {
+	&.subheading, small {
 		color: @subheading-color;
+		font-size: 87.5%;
 	}
 }
 
 h1 {
 	font-size: 2em;
-	&.subheading {
-		font-size: 2em * .9;
-	}
 }
 
 h2 {
 	font-size: 1.6666em;
-	&.subheading {
-		font-size: 1.6666em * .9;
-	}
 }
 
 h3 {
 	font-size: 1.5em;
-	&.subheading {
-		font-size: 1.5em * .9;
-	}
 }
 
 h4 {
 	font-size: 1.3333em;
-	&.subheading {
-		font-size: 1.3333em * .9;
-	}
 }
 
 h5 {
 	font-size: 1.1667em;
-	&.subheading {
+	&.subheading, small {
 		font-size: 1em;
 	}
 }
 
 h6 {
 	font-size: 1em;
+	&.subheading, small {
+		font-size: 1em;
+	}
+}
+
+article {
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 300;
+	}
+}
+
+section {
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 500;
+	}
 }
 
 // paragraph styles plus helper classes
 p {
+	margin-top: @paragraph-val/2;
 	margin-bottom: @paragraph-val;
 
 	img {
@@ -136,7 +142,8 @@ span {
 	}
 }
 
-// TODO zur Diskussion: Silbentrennung nur in article oder überall?
+// TODO zur Diskussion: Silbentrennung nur in article
+
 article {
 	p, ul {
 		// nach Trent Walton
@@ -155,38 +162,40 @@ article {
 	}
 }
 
-//  Links
-//  TODO zur Diskussion: für article unterscheiden
+// TODO zur Diskussion: text indent nur in article
 
 article {
-	a {
-		line-height: inherit;
-		outline: 0;
-		text-decoration: underline;
-		color: @link-color;
-
-		&:hover{
-			color: @link-hover-color;
+	p {
+		& + p {
+			// siblings indentation
+			text-indent: @indent-val;
+			margin-top: -@paragraph-val;
+			// text-align: justify;
 		}
-
-		&:focus {
-			color: @link-focus-color;
+		&.bild + p,
+		&.lead + p,
+		&.bildlegende + p,
+		&.autor + p {
+			text-indent: 0 !important;
 		}
-
-		&:visited {
-			color: @link-visited-color;
-		}
-
-		img {
-			outline: 0;
+		&.readmore {
+			text-indent: 0 !important;
+			display: block;
+			margin: 1em 0 !important;
+			a {
+				margin: 0 !important;
+			}
 		}
 	}
 }
 
+//  Links
+//  TODO zur Diskussion: für article unterscheiden
+
 a {
 	line-height: inherit;
 	outline: 0;
-	text-decoration: none;
+	text-decoration: none ;
 	color: @link-color;
 
 	&:hover{
@@ -257,7 +266,7 @@ acronym, abbr {
 
 mark {
 	background: yellow;
-	color: maroon;
+	color: midnightblue;
 }
 
 //	definition lists allgemein
@@ -314,7 +323,7 @@ article {
 	ul, ol {
 		margin-bottom: 1.5em;
 		list-style: outside;
-		margin-left: 1.5em;
+		margin-left: 1em;
 
 		li {
 			line-height: 1.3;
@@ -330,7 +339,7 @@ article {
 		list-style-type: disc;
 
 		ol, ul {
-			margin: 0.5em 0 0.5em 1.5em;
+			margin: 0.5em 0 0.5em 1em;
 		}
 
 		ul {
@@ -346,14 +355,14 @@ article {
 		list-style-type: decimal;
 
 		ul, ol {
-			margin: 0.5em 0 0.5em 1.5em;
+			margin: 0.5em 0 0.5em 1em;
 		}
 	}
 }
 
 ul, ol {
 	list-style: outside;
-	margin-left: 1em;
+	margin-left: .5em;
 
 	li {
 		line-height: 1.4;
@@ -368,7 +377,7 @@ ul {
 	list-style-type: disc;
 
 	ol, ul {
-		margin-left: 1em;
+		margin-left: .5em;
 	}
 
 	ul {
@@ -384,7 +393,7 @@ ol {
 	list-style-type: decimal;
 
 	ul, ol {
-		margin-left: 1em;
+		margin-left: .5em;
 	}
 }
 
@@ -543,9 +552,11 @@ article {
 	}
 }
 
-// FiraSans
+// Fira Sans
+// Experiment: über brick laden
+/*
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-Regular.eot');
 	src: url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Regular.woff') format('woff'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
 	font-weight: normal;
@@ -553,7 +564,7 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-Light.eot');
 	src: url('../fonts/FiraSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Light.woff') format('woff'), url('../fonts/FiraSans-Light.ttf') format('truetype');
 	font-weight: 300;
@@ -561,7 +572,7 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-Medium.eot');
 	src: url('../fonts/FiraSans-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Medium.woff') format('woff'), url('../fonts/FiraSans-Medium.ttf') format('truetype');
 	font-weight: 500;
@@ -569,7 +580,7 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-Bold.eot');
 	src: url('../fonts/FiraSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Bold.woff') format('woff'), url('../fonts/FiraSans-Bold.ttf') format('truetype');
 	font-weight: bold;
@@ -578,7 +589,7 @@ article {
 
 // italics
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-RegularItalic.eot');
 	src: url('../fonts/FiraSans-RegularItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-RegularItalic.woff') format('woff'), url('../fonts/FiraSans-RegularItalic.ttf') format('truetype');
 	font-weight: normal;
@@ -586,7 +597,7 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-LightItalic.eot');
 	src: url('../fonts/FiraSans-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-LightItalic.woff') format('woff'), url('../fonts/FiraSans-LightItalic.ttf') format('truetype');
 	font-weight: 300;
@@ -594,7 +605,7 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-MediumItalic.eot');
 	src: url('../fonts/FiraSans-MediumItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-MediumItalic.woff') format('woff'), url('../fonts/FiraSans-MediumItalic.ttf') format('truetype');
 	font-weight: 500;
@@ -602,9 +613,10 @@ article {
 }
 
 @font-face {
-	font-family: 'FiraSans';
+	font-family: 'Fira Sans';
 	src: url('../fonts/FiraSans-BoldItalic.eot');
 	src: url('../fonts/FiraSans-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-BoldItalic.woff') format('woff'), url('../fonts/FiraSans-BoldItalic.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 }
+*/

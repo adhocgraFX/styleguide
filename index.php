@@ -68,14 +68,18 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-  <title>Style Guide Boilerplate</title>
-  <meta name="viewport" content="width=device-width">
-  <!-- Style Guide Boilerplate Styles -->
-  <link rel="stylesheet" href="css/sg-style.css">
-  <!-- Replace below stylesheet with your own stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- j-template stylesheet -->
-  <link rel="stylesheet" href="css/j-template.css">
+    <title>Style Guide Boilerplate</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Style Guide Boilerplate Styles -->
+    <link rel="stylesheet" href="css/sg-style.css">
+    <!-- Replace below stylesheet with your own stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Experiment: brick font loader -->
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
+
+    <!-- j-template stylesheet -->
+    <link rel="stylesheet" href="css/j-template.css">
 
 </head>
 <body>
@@ -102,7 +106,7 @@
   </form><!--/.sg-nav-->
 </div><!--/.sg-header-->
 
-<div class="sg-body sg-container">
+<div class="sg-body sg-container adhoc-wrapper">
   <div class="sg-info">               
     <div class="sg-about sg-section">
       <h2 class="sg-h2"><a id="sg-about" class="sg-anchor">About</a></h2>
@@ -121,12 +125,14 @@
     </div><!--/.sg-about-->
     
     <div class="sg-colors sg-section">
-      <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">adhocgraFX Colors</a></h2>
+      <h2 class="sg-h2"><a id="sg-colors" class="sg-anchor">light blue color scale</a></h2>
         <div class="sg-color sg-color--a"><span class="sg-color-swatch"><span class="sg-animated">#88ffda</span></span></div>
         <div class="sg-color sg-color--b"><span class="sg-color-swatch"><span class="sg-animated">#4dd3c9</span></span></div>
         <div class="sg-color sg-color--c"><span class="sg-color-swatch"><span class="sg-animated">#339db0</span></span></div>
+      <h2 class="sg-h2">dark gray color scale</h2>
         <div class="sg-color sg-color--d"><span class="sg-color-swatch"><span class="sg-animated">#2078aa</span></span></div>
         <div class="sg-color sg-color--e"><span class="sg-color-swatch"><span class="sg-animated">#3a517a</span></span></div>
+      <h2 class="sg-h2">dark blue color scale</h2>
         <div class="sg-color sg-color--f"><span class="sg-color-swatch"><span class="sg-animated">#384355</span></span></div>
         <div class="sg-color sg-color--g"><span class="sg-color-swatch"><span class="sg-animated">#2078aa</span></span></div>
         <div class="sg-color sg-color--h"><span class="sg-color-swatch"><span class="sg-animated">#3a517a</span></span></div>
@@ -136,7 +142,7 @@
     
     <div class="sg-font-stacks sg-section">
       <h2 class="sg-h2"><a id="sg-fontStacks" class="sg-anchor">Font Stacks</a></h2>
-      <p class="sg-font sg-font-primary">"FiraSans", "HelveticaNeue", "Helvetica", Arial, sans-serif;</p>
+      <p class="sg-font sg-font-primary">'Fira Sans', Helvetica, Arial, 'Droid Sans', sans-serif;</p>
       <p class="sg-font sg-font-secondary">Georgia, Times, "Times New Roman", serif;</p>
       <div class="sg-markup-controls"><a class="sg-btn--top" href="#top">Back to Top</a></div>
     </div><!--/.sg-font-stacks-->

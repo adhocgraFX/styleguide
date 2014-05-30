@@ -1,5 +1,5 @@
  body {
-  font-family: "FiraSans", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+	 font-family: 'Fira Sans', Helvetica, Arial, 'Droid Sans', sans-serif;
 }
 
 /* -------------------------------------------------------------------------
@@ -24,7 +24,7 @@
 /* -------------------------------------------------------------------------
  Fonts
 ---------------------------------------------------------------------------- */
-.sg-font-primary {font-family: "FiraSans", "HelveticaNeue", "Helvetica", Arial, sans-serif;}
+.sg-font-primary {font-family: font-family: 'Fira Sans', Helvetica, Arial, 'Droid Sans', sans-serif;}
 
 .sg-font-secondary {font-family: Georgia, Times, "Times New Roman", serif;}
 

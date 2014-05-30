@@ -17,7 +17,9 @@
           box-sizing: border-box;
 }
 
-body {margin: 0;}
+body {
+	margin: 0;
+}
 
 .sg-header {
   background: #000;
@@ -45,6 +47,20 @@ body {margin: 0;}
   overflow: hidden;
   padding: 16px 24px; /* For older browsers */
   padding: 1rem 1.5rem;
+}
+
+.adhoc-wrapper {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 50em;
+	background: white;
+}
+
+@media screen and (max-width: 650px) {
+	.adhoc-wrapper {
+		margin: 0 auto;
+		width: 100%;
+	}
 }
 
 .sg-animated {
@@ -109,7 +125,7 @@ body {margin: 0;}
 .sg-h1,
 .sg-h2,
 .sg-h3 {
-  font-family: "FiraSans", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-weight: normal;
   margin-bottom: 1em;
   margin-top: 0;
