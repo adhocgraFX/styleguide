@@ -1,0 +1,176 @@
+// Module Chrome Styles
+// ==================================================
+// Module chrome joomskeleton
+.module {
+	background: transparent;
+	margin-bottom: 1.5em;
+	display: block;
+	font-size: 1em;
+
+	a:hover, a:active {
+		text-decoration: underline !important;
+		background: transparent !important;
+	}
+
+	.module-body {
+		background: @white;
+		padding: 1em;
+		display: block;
+		overflow: hidden;
+		height: 100%;
+		color: @gray-dark;
+		border: 1px solid @gainsboro;
+
+		div {
+			width: 100%;
+			padding: 0;
+		}
+
+		ul {
+			margin-bottom: 1em;
+			list-style: none outside;
+			margin-left: 0;
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	.module-title {
+		padding: .5em 1em;
+		margin: 0;
+
+		h4.title {
+			color: @smoke;
+			font-size: 1.25em;
+			line-height: 1.4;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
+// module-body dark-body für dunkle hintergründe
+.dark-body {
+	.module-body {
+		background: @gray-dark;
+		color: @smoke;
+		border: 1px solid @black;
+	}
+}
+
+// modulfarben allgemein  -  grau- und schwarzwerte
+.white {
+	.module-body {
+		border-bottom: .5em solid @gainsboro-light;
+	}
+	.module-title {
+		background: @gainsboro;
+
+		h4.title {
+			color: @concrete-darker;
+		}
+	}
+}
+
+.clouds {
+	.module-body {
+		border-bottom: .5em solid @clouds;
+	}
+	.module-title {
+		background: @clouds-dark;
+
+		h4.title {
+			color: @concrete-darker;
+		}
+	}
+}
+
+.concrete {
+	.module-body {
+		border-bottom: .5em solid @concrete;
+	}
+	.module-title {
+		background: @concrete-dark;
+	}
+}
+
+/* bunte modulfarben für infos - blau, rot, grün, gelb */
+.midnightblue {
+	.module-body {
+		border-bottom: .5em solid @midnightblue;
+	}
+	.module-title {
+		background: @midnightblue-dark;
+	}
+}
+
+.turquoise {
+	.module-body {
+		border-bottom: .5em solid @turquoise;
+	}
+	.module-title {
+		background: @turquoise-dark;
+	}
+}
+
+.blue, .info {
+	.module-body {
+		border-bottom: .5em solid @blue;
+	}
+	.module-title {
+		background: @blue-dark;
+	}
+}
+
+.red, .alert {
+	.module-body {
+		border-bottom: .5em solid @red;
+	}
+	.module-title {
+		background: @red-dark;
+	}
+}
+
+.green, .success {
+	.module-body {
+		border-bottom: .5em solid @green;
+	}
+	.module-title {
+		background: @green-dark;
+	}
+}
+
+.yellow, .question {
+	.module-body {
+		border-bottom: .5em solid @yellow;
+	}
+	.module-title {
+		background: @yellow-dark;
+	}
+}
+
+.orange {
+	.module-body {
+		border-bottom: .5em solid @orange;
+	}
+	.module-title {
+		background: @orange-dark;
+	}
+}
+
+// module chrome transparent
+.transparent {
+	.module-body {
+		background: transparent;
+		border: 0 !important;
+		color: inherit !important;
+	}
+
+	.module-title {
+		background: transparent;
+
+		h4.title {
+			color: inherit !important;
+		}
+	}
+}
