@@ -1,0 +1,65 @@
+// flexbox mixins
+
+//display flex: vendor prefixes allg
+.flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+// flex values: This is the shorthand for:
+// flex-grow, flex-shrink and flex-basis - combined.
+// The second and third parameters (flex-shrink and flex-basis) are optional.
+// Default is 0 1 auto.
+.flex(@values) {
+	-webkit-box-flex: @values;
+	-moz-box-flex:  @values;
+	-webkit-flex:  @values;
+	-ms-flex:  @values;
+	flex:  @values;
+}
+
+// order value: integer, reihenfolge der kind-objekte
+.order(@val) {
+	-webkit-box-ordinal-group: @val;
+	-moz-box-ordinal-group: @val;
+	-ms-flex-order: @val;
+	-webkit-order: @val;
+	order: @val;
+}
+
+// todo prefixes für folgende props überprüfen
+
+// flex-direction: row | row-reverse | column | column-reverse;
+.flex-direction(@val) {
+	-webkit-flex-direction: @val;
+	-moz-flex-direction: @val;
+	flex-direction: @val;
+}
+
+// flex-wrap: nowrap | wrap | wrap-reverse;
+.flex-wrap(@val) {
+	-webkit-flex-wrap: @val;
+	-moz-flex-wrap:  @val;
+	flex-wrap:  @val;
+}
+
+// flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+.flex-flow(@values) {
+	-webkit-flex-flow: @values;
+	-moz-flex-flow: @values;
+	flex-flow: @values;
+}
+
+// justify-content: flex-start | flex-end | center | space-between | space-around;
+.justify-content(@val) {
+	-webkit-justify-content: @val;
+	-moz-justify-content: @val;
+	justify-content:@val;
+}
+// todo mixins fertigstellen
+// align-items: flex-start | flex-end | center | baseline | stretch;
+
+// align-content: flex-start | flex-end | center | space-between | space-around | stretch;

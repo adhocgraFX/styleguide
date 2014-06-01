@@ -119,8 +119,10 @@
             <li>forms</li>
             <li>buttons</li>
             <li>images and media</li>
-            <li>breadcrumbs</li>
             <li>alerts</li>
+            <li>breadcrumbs</li>
+            <li>module chrome</li>
+            <li>nav</li>
         </ul>
     </div><!--/.sg-about-->
     
