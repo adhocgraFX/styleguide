@@ -72,13 +72,13 @@
     <meta name="viewport" content="width=device-width">
     <!-- Style Guide Boilerplate Styles -->
     <link rel="stylesheet" href="css/sg-style.css">
-    <!-- Replace below stylesheet with your own stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- J-Template stylesheets -->
     <!-- Experiment: brick font loader -->
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Fira+Sans:300,300i,400,400i,500,500i,700,700i">
 
-    <!-- j-template stylesheet -->
+    <!-- J-Template stylesheet -->
     <link rel="stylesheet" href="css/j-template.css">
 
 </head>
